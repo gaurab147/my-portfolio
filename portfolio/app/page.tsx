@@ -1,11 +1,13 @@
 import Header from "./_components/header";
 import Hero from "./_components/Hero";
+import Skill from "./_components/skill/page";
+import Profile from "./_components/profile/page";
+import Strengths from "./_components/strengths/page";
 import styles from "./page.module.css";
-import Translator from "./_components/Translator";
 
 export default function Home() {
   return (
-    <>
+    <main className={styles.main}>
       <Header />
       <Hero />
 
@@ -26,6 +28,16 @@ export default function Home() {
         <h2>My Work</h2>
         <p>Check out my GitHub for some projects I’ve built (coming soon!)</p>
       </section>
-    </>
+
+      <section id="skills">
+        <Skill />
+      </section>
+      <section id="profile">
+        <Profile />
+      </section>
+      <section id="strengths">
+        <Strengths />
+      </section>
+    </main>
   );
 }
